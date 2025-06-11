@@ -14,6 +14,7 @@ import Adminverification from './Components/adminverification';
 import Adminusers from './Admin/Adminusers';
 import UpdateEmployee from './Admin/UpdateEmployee';
 import Addemployee from './Admin/Addemployee';
+import Sendmsg from './Admin/Sendmsg';
 import './App.css';
 
 function AppRoutes() {
@@ -32,10 +33,11 @@ function AppRoutes() {
   const isExactMatch = exactHideHeaderRoutes.includes(location.pathname);
 
   const isUpdateUserRoute = location.pathname.startsWith('/updateuser/');
-  const isAddemployeeRoute = location.pathname.startsWith('/addemployee')
+  const isAddemployeeRoute = location.pathname.startsWith('/addemployee');
+  const isSendmsgRoute = location.pathname.startsWith('/sendmessage')
 
   // Decide if header should be hidden
-  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute;
+  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute;
 
   return (
     <>
@@ -57,6 +59,8 @@ function AppRoutes() {
         <Route path="/adminusers" element={<Adminusers />} />
         <Route path="/updateuser/:id" element={<UpdateEmployee />} />
         <Route path='/addemployee' element={<Addemployee/>}/>
+        <Route path='/sendmessage' element={<Sendmsg/>}/>
+
       </Routes>
     </>
   );

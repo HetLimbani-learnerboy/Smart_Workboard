@@ -139,7 +139,7 @@ const Adminusers = () => {
           <button
             type="button"
             className="action-btn"
-            onClick={() => navigate("/send-message")}
+            onClick={() => navigate("/sendmessage")}
           >
             📨 Send Message
           </button>
