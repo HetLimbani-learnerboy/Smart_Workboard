@@ -46,7 +46,7 @@ const AdminHomepage = () => {
         <div className="navbar-left">
           <Link to="/adminpage" className="brand-logo">
             <img src="/logo192.png" alt="Logo" />
-            <span>Smart_AdminBoard</span>
+            <span>Smart_Workboard</span>
           </Link>
         </div>
 
@@ -104,7 +104,7 @@ const AdminHomepage = () => {
                 </div>
                 <ul className="sidebar-menu">
                   <li><Link to="/adminusers">👥 User Management</Link></li>
-                  <li><Link to="/Admin/providetasks">📋 Provide Tasks</Link></li>
+                  <li><Link to="/providetask">📋 Provide Tasks</Link></li>
                   <li><Link to="/Admin/meeting">💬 Meeting & Interview Scheduling</Link></li>
                   <li><Link to="/Admin/applicationmanage">🧑‍💻 Application Management</Link></li>
                   <li><Link to="/Admin/settings">⚙️ Settings</Link></li>
@@ -122,7 +122,7 @@ const AdminHomepage = () => {
         <p>Control and monitor users, tasks, applications, and more.</p>
         <div className="employee-card-section">
           <Link className="employee-card" to="/adminusers">👥 Manage Users</Link>
-          <Link className="employee-card" to="/Admin/providetasks">📋 Provide Tasks</Link>
+          <Link className="employee-card" to="/providetask">📋 Provide Tasks</Link>
           <Link className="employee-card" to="/Admin/meeting">💬 Meeting & Interview Scheduling</Link>
           <Link className="employee-card" to="/Admin/applicationmanage">🧑‍💻 Application Management</Link>
           <Link className="employee-card" to="/Admin/pdfreport">🧠 Resume Evaluation</Link>
