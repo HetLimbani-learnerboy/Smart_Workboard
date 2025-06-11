@@ -1,38 +1,304 @@
-.App {
+
+.header-container {
+  color: azure;
+  padding: 0;
   text-align: center;
+  position: relative;  /* needed for absolute positioning of video */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name-ul {
+
+  position: fixed;
+  top: 30px;
+  right: 24px;
+  background-color: #1976d2;
+  color: azure;
+  padding: 8px 24px;
+  margin: 0;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 12px;
+  z-index: 1100;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.name-ul li {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.name-ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.name-ul li a:hover {
+  background-color: #ffffff;
+  color: #1976d2;
+  padding: 8px 16px;
+  border-radius: 15px;
+}
+
+@media (max-width: 700px) {
+  .name-ul {
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  .name-ul li {
+    padding: 6px 8px;
+  }
+  .name-ul li a {
+    font-size: 15px;
+    padding: 4px 8px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* Animation for header-animation remains unchanged */
+@keyframes rotateInfinite {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.header-animation {
+  position: absolute;
+  top: calc(7% - 20.5px);
+  left: 20px;
+  width: 110px;
+  height: 55px;
+  object-fit: contain;
+  pointer-events: none;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(25, 43, 194, 0.6);
+  z-index: 1000;
+  filter: drop-shadow(0 0 5px #192bc2);
+  background-color: rgba(25, 43, 194, 0.15);
+  animation: rotateInfinite 10s linear infinite;
+}
+
+.homepage {
+  position: static;
+  border: 3px solid #1976d2;
+  border-radius: 50px;
+  padding: 12px 24px;
+   margin: calc(29% - 35%) auto;
+  background-color: #f0f0f0;
+  width: fit-content;
+  font-size: 22px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.homepage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #1976d2, #192bc2);
+  transition: all 0.5s ease;
+  z-index: -1;
+  border-radius: 40px;
+}
+
+.homepage:hover::before {
+  left: 0;
+}
+
+.homepage p {
+  margin: 10px;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.homepage p a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.homepage:hover p a {
+  color: #fff;
+  font-weight:bolder ;
+  transform: scale(1.05);
+}
+
+
+.paragraph {
+  color: #1a1a1a; /* rich black */
+  font-size: 2rem;
+  font-family: 'Fira Code', 'Consolas', 'Segoe UI', monospace; 
+  font-weight: 700;
+  overflow: hidden;
+  white-space: normal; /* allow wrapping */
+  word-break: break-word; /* break long words */
+  border-right: 2px solid #1a1a1a;
+  max-width: 80%;
+  display: inline-block;
+  animation: typing 4s steps(70, end) forwards, blink 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+  margin: 5% 7%;
+  line-height: 1;
+  padding: 5%;
+  text-align:center;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  10% { border-color: transparent; }
+}
+
+.image-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: -10% auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-row {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  align-items: center;
+}
+
+.image-row img {
+  width: 200px;               /* fixed width */
+  height: 140px;              /* fixed height */
+  object-fit: cover;          /* keeps aspect ratio, crops excess */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+/* Scroll animations */
+@keyframes scroll-left-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll-right-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animations */
+.scroll-left-right {
+  animation-name: scroll-left-right;
+}
+
+.scroll-right-left {
+  animation-name: scroll-right-left;
+}
+
+
+.about-us-container {
+  max-width: 200%;
+  margin: 15% 100px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 50px rgba(0,0,0,0.1);
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.about-us-container h1,
+.about-us-container h2 {
+  color: #1976d2;
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.about-us-container p,
+.about-us-container ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about-us-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-us-container ul li strong {
+  color: #005cb8;
+}
+
+/* Wrapper for left and right sections */
+.about-content-wrapper {
+  display: flex;
+  gap: 50px;
+  margin-top: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* wraps on smaller screens */
+}
+
+/* Left and right sections take roughly half width */
+.left-section, .right-section {
+  flex: 1 1 20%; /* grow, shrink, basis 45% */
+  min-width: 280px; /* prevent too narrow columns */
+}
+
+/* Animation */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweak: stack vertically on narrow screens */
+@media (max-width: 700px) {
+  .about-content-wrapper {
+    flex-direction: column;
+  }
+
+.left-section, .right-section {
+    flex: 1 1 100%;
+    min-width: auto;
   }
 }

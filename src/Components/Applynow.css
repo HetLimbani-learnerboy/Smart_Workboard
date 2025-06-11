@@ -1,0 +1,172 @@
+/* Wrapper to align images and form */
+.applynow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 40px;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Image Columns (left & right) */
+.applynowimage-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 70px;
+  height: 60%;
+}
+
+/* Individual images with animation */
+.applynowimage-column img {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(25, 43, 194, 0.2);
+  margin-top: 15%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.applynowimage-column img:hover {
+  transform: scale(1.05) rotateZ(1deg);
+  box-shadow: 0 12px 25px rgba(25, 43, 194, 0.4);
+}
+
+/* Form container */
+.applynow-container {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgb(1, 90, 255);
+  color: white;
+  transform: translateY(50px);
+  width: 90%;
+}
+
+/* Heading */
+.applynow-container h2 {
+  color: #1976d2;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #1976d2;
+}
+
+/* Inputs and Select */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 254, 0.1);
+  color: #1976d2;
+  font-size: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  box-shadow: 0 0 5px #1976d2;
+}
+
+/* File Input */
+input[type="file"] {
+  color: white;
+  font-size: 14px;
+}
+
+input[type="file"]::file-selector-button {
+  background: #1976d2;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #1259a5;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background: transparent;
+  color: #1976d2;
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #1976d2, #192bc2);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+button[type="submit"]:hover {
+  color: white;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover::before {
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .applynow-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .applynowimage-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .applynowimage-column img {
+    width: 45%;
+    max-width: 200px;
+  }
+}

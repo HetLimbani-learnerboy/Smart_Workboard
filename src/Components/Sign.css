@@ -1,0 +1,206 @@
+/* Body styles */
+.signin-body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container */
+.signin-container {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 40px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 30px rgb(1, 90, 255);
+  color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.2s ease forwards, floatUpDown 4s ease-in-out infinite;
+}
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Heading */
+h2 {
+  color: #1976d2;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #1976d2;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 254, 0.1);
+  color: 1976d2;
+  font-size: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  box-shadow: 0 0 5px #1976d2;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 85%;
+  padding: 12px;
+  padding-right: 44px; /* Space for the eye icon */
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 254, 0.1);
+  font-size: 16px;
+  color: #1976d2;
+}
+
+.eye-icon {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.eye-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.eye-icon-img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+/* Sign In Button */
+.signin-btn {
+  background: transparent;
+  color: #1976d2;
+  padding: 12px;
+  width: 100%;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.signin-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #1976d2, #192bc2);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.signin-btn:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.signin-btn:hover::before {
+  left: 0;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.signup-link a {
+  color: #ff7f01;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #2f2f2f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #1976d2;
+  color: white;
+}
+
+/* Animation keyframe */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signin-container {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
