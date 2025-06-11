@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Adminpagedesign.css';
 
@@ -6,6 +6,8 @@ const AdminHomepage = () => {
   const [showNotif, setShowNotif] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  const [messages, setMessages] = useState([]);
 
   const navigate = useNavigate();
 
@@ -18,21 +20,24 @@ const AdminHomepage = () => {
     user = { name: "Admin" };
   }
 
+  // Fetch notifications on mount
+  useEffect(() => {
+    fetch("http://localhost:5021/notifications")
+      .then(res => res.json())
+      .then(data => setNotifications(data));
+  }, []);
+
+  // Fetch messages for admin on mount (optional: adjust endpoint as needed)
+  useEffect(() => {
+    fetch("http://localhost:5021/messages/admin")
+      .then(res => res.json())
+      .then(data => setMessages(data.messages || []));
+  }, []);
+
   const handleLogout = () => {
     localStorage.removeItem("User");
     navigate("/signin");
   };
-
-  const notifications = [
-    "5 new users registered",
-    "Job approval pending",
-    "System health report available"
-  ];
-
-  const messages = [
-    "Support Team: Maintenance completed.",
-    "HR: New guidelines uploaded."
-  ];
 
   return (
     <div className="employee-homepage">
@@ -55,7 +60,13 @@ const AdminHomepage = () => {
             <span className="notif-badge">{notifications.length}</span>
             {showNotif && (
               <div className="notif-dropdown">
-                <ul>{notifications.map((n, i) => <li key={i}>{n}</li>)}</ul>
+                <ul>
+                  {notifications.length > 0 ? (
+                    notifications.map((n, i) => <li key={i}>{n.message}</li>)
+                  ) : (
+                    <li>No notifications</li>
+                  )}
+                </ul>
               </div>
             )}
           </div>
@@ -65,7 +76,13 @@ const AdminHomepage = () => {
             <span className="notif-badge">{messages.length}</span>
             {showMessages && (
               <div className="notif-dropdown">
-                <ul>{messages.map((m, i) => <li key={i}>{m}</li>)}</ul>
+                <ul>
+                  {messages.length > 0 ? (
+                    messages.map((m, i) => <li key={i}>{m.message}</li>)
+                  ) : (
+                    <li>No messages yet</li>
+                  )}
+                </ul>
               </div>
             )}
           </div>

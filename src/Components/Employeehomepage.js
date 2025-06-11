@@ -1,28 +1,39 @@
-import React, { useState } from 'react';
-import './Employeehomelayout.css'
+import React, { useState, useEffect } from 'react';
+import './Employeehomelayout.css';
 
 const EmployeeHomepage = () => {
   const [showNotif, setShowNotif] = useState(false);
-  const [showProfile, setShowProfile] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  const [messages, setMessages] = useState([]);
 
-  const user = JSON.parse(localStorage.getItem("User")) || { name: "User" };
+  const user = JSON.parse(localStorage.getItem("User")) || { name: "User", _id: "" };
+
+  // Fetch notifications on mount
+  useEffect(() => {
+    fetch("http://localhost:5021/notifications")
+      .then(res => res.json())
+      .then(data => setNotifications(data));
+  }, []);
+
+  // Fetch messages on mount
+  useEffect(() => {
+    if (user._id) {
+      fetch(`http://localhost:5021/messages/${user._id}`)
+        .then(res => res.json())
+        .then(data => setMessages(data.messages || []));
+    }
+  }, [user._id]);
 
   const handleLogout = () => {
     localStorage.removeItem("User");
     window.location.href = "/";
   };
 
-  const notifications = [
-    "New job match: Frontend Developer",
-    "Interview invite from ABC Corp",
-    "Application update: Backend Engineer",
-    "hello engineer:work well"
-  ];
-  const messages = [
-    "Recruiter: Please update your resume.",
-    "HR: Welcome to the team!"
-  ];
+  // Only toggle dropdown, don't fetch again
+  const toggleNotifications = () => setShowNotif(!showNotif);
+  const toggleMessages = () => setShowMessages(!showMessages);
 
   return (
     <div className="employeehomepage">
@@ -36,30 +47,40 @@ const EmployeeHomepage = () => {
         </div>
 
         <div className="navbarcenter">
-          <input
-            type="text"
-            placeholder="Search."
-            className="navbarsearch"
-          />
+          <input type="text" placeholder="Search." className="navbarsearch" />
         </div>
 
         <div className="navbarright">
           <div className="navbaricon">
-            <span onClick={() => setShowNotif(!showNotif)} title="Notifications">🔔</span>
+            <span onClick={toggleNotifications} title="Notifications">🔔</span>
             <span className="notifbadge">{notifications.length}</span>
             {showNotif && (
               <div className="notifdropdown">
-                <ul>{notifications.map((n, i) => <li key={i}>{n}</li>)}</ul>
+                <ul>
+                  {notifications.length > 0 ? (
+                    notifications.map((n, i) => (
+                      <li key={i}>{n.message}</li>
+                    ))
+                  ) : (
+                    <li>No notifications</li>
+                  )}
+                </ul>
               </div>
             )}
           </div>
 
           <div className="navbaricon">
-            <span onClick={() => setShowMessages(!showMessages)} title="Messages">💬</span>
+            <span onClick={toggleMessages} title="Messages">💬</span>
             <span className="notifbadge">{messages.length}</span>
             {showMessages && (
               <div className="notifdropdown">
-                <ul>{messages.map((m, i) => <li key={i}>{m}</li>)}</ul>
+                <ul>
+                  {messages.length > 0 ? (
+                    messages.map((m, i) => <li key={i}>{m.message}</li>)
+                  ) : (
+                    <li>No messages yet</li>
+                  )}
+                </ul>
               </div>
             )}
           </div>
@@ -72,8 +93,8 @@ const EmployeeHomepage = () => {
               <div className="profilesidebar">
                 <div className="sidebarheader">
                   <span className="closebtn" onClick={() => setShowProfile(false)}>×</span>
-                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Menu</h3>
+                   <h3>   {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+                    Menu</h3>
                 </div>
                 <ul className="sidebarmenu">
                   <li><a href="/profile">👤 View Profile</a></li>
