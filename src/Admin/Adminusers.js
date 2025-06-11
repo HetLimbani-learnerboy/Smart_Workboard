@@ -4,7 +4,7 @@ import "./Adminusers.css";
 
 const Adminusers = () => {
   const [employees, setEmployees] = useState([]);
-  const [showActions, setShowActions] = useState(false);
+
   const navigate = useNavigate();
 
   // Fetch all employees
@@ -146,7 +146,7 @@ const Adminusers = () => {
           <button
             type="button"
             className="action-btn"
-            onClick={() => navigate("/send-notification")}
+            onClick={() => navigate("/sendnotification")}
           >
             🔔 Send Notification
           </button>

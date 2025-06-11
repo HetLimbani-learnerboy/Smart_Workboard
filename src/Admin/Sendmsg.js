@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Sendmsg.css";
 
 const Sendmsg = () => {
@@ -107,6 +108,8 @@ const Sendmsg = () => {
       />
 
       <button className="send-btn" onClick={handleSubmit}>Send Message</button>
+      <Link className="back-btn" to="/adminusers">← Back</Link>
+
     </div>
   );
 };
