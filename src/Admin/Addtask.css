@@ -1,0 +1,73 @@
+.addtask-container {
+  max-width: 600px;
+  margin-top: 10%;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  margin-left: 33%
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.search-input, .task-input{
+max-width: 575px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.status-dropdown{
+    max-width: 600px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.employee-list {
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.employee-item {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.sendbtn {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.backbtn {
+max-width: 70px;
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  text-decoration: none;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}

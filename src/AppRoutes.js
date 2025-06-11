@@ -17,6 +17,7 @@ import Addemployee from './Admin/Addemployee';
 import Sendmsg from './Admin/Sendmsg';
 import Providetask from './Admin/Providetask';
 import SendNotification from './Admin/SendNotification';
+import Addtask from './Admin/Addtasks';
 
 import './App.css';
 
@@ -40,8 +41,10 @@ function AppRoutes() {
   const isSendmsgRoute = location.pathname.startsWith('/sendmessage');
   const isSendnotiRoute= location.pathname.startsWith('/sendnotification');
   const isProvidetaskRoute = location.pathname.startsWith('/providetask');
+  const isAddtask= location.pathname.startsWith('/addtask')
   
-  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute|| isProvidetaskRoute;
+  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute||
+   isProvidetaskRoute|| isAddtask;
 
   return (
     <>
@@ -66,6 +69,7 @@ function AppRoutes() {
         <Route path='/sendmessage' element={<Sendmsg/>}/>
         <Route path='/sendnotification' element={<SendNotification/>}/>
         <Route path='/providetask' element={<Providetask/>}/>
+        <Route path='/addtask' element={<Addtask/>}/>
 
       </Routes>
     </>

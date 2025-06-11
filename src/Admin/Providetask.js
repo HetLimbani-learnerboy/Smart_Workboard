@@ -1,30 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Providetask.css';
 
 const Providetask = () => {
-  const [tasks, setTasks] = useState([
-    { name: "John Doe", email: "john@example.com", description: "Fix dashboard bug", status: "assigned" },
-    { name: "Jane Smith", email: "jane@example.com", description: "Design new banner", status: "working" }
-  ]);
-
+  const [tasks, setTasks] = useState([]);
   const [showDelete, setShowDelete] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleStatus = (index) => {
-    const updated = [...tasks];
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
+  const fetchTasks = async () => {
+  const res = await fetch("http://localhost:5021/providetask");
+  if (res.ok) {
+    const data = await res.json();
+    setTasks(data);
+  }
+};
+
+
+  const toggleStatus = async (taskId, currentStatus) => {
     const statusCycle = ['assigned', 'working', 'finished'];
-    const currentStatus = updated[index].status;
     const nextStatus = statusCycle[(statusCycle.indexOf(currentStatus) + 1) % 3];
-    updated[index].status = nextStatus;
-    setTasks(updated);
+    await fetch(`http://localhost:5021/updateprovidetask/${taskId}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: nextStatus }),
+    });
+    fetchTasks();
   };
 
-  const handleDelete = (index) => {
-    const updated = [...tasks];
-    updated.splice(index, 1);
-    setTasks(updated);
+  const handleDelete = async (taskId) => {
+    await fetch(`http://localhost:5021/deleteprovidetask/${taskId}`, {
+      method: 'DELETE',
+    });
+    fetchTasks();
   };
 
-  // Count statuses
   const assignedCount = tasks.filter(t => t.status === 'assigned').length;
   const workingCount = tasks.filter(t => t.status === 'working').length;
   const finishedCount = tasks.filter(t => t.status === 'finished').length;
@@ -40,7 +53,7 @@ const Providetask = () => {
       </div>
 
       <div className="button-group">
-        <button className="add-btn">➕ Add Task</button>
+        <button className="add-btn" onClick={() => navigate('/addtask')}>➕ Add Task</button>
         <button className="delete-btn" onClick={() => setShowDelete(!showDelete)}>
           {showDelete ? '✅ Done Deleting' : '🗑️ Delete Task'}
         </button>
@@ -64,7 +77,7 @@ const Providetask = () => {
             </tr>
           ) : (
             tasks.map((task, index) => (
-              <tr key={index}>
+              <tr key={task._id}>
                 <td>{index + 1}</td>
                 <td>{task.name}</td>
                 <td>{task.email}</td>
@@ -72,14 +85,14 @@ const Providetask = () => {
                 <td>
                   <button
                     className={`status-btn ${task.status}`}
-                    onClick={() => toggleStatus(index)}
+                    onClick={() => toggleStatus(task._id, task.status)}
                   >
                     {task.status.charAt(0).toUpperCase() + task.status.slice(1)}
                   </button>
                 </td>
                 {showDelete && (
                   <td>
-                    <button className="delete-row-btn" onClick={() => handleDelete(index)}>
+                    <button className="delete-row-btn" onClick={() => handleDelete(task._id)}>
                       ❌ Delete
                     </button>
                   </td>
@@ -89,6 +102,8 @@ const Providetask = () => {
           )}
         </tbody>
       </table>
+
+      <button className="back-btn" onClick={() => navigate("/adminpage")}>← Back</button>
     </div>
   );
 };
