@@ -72,7 +72,7 @@ const EmployeeHomepage = () => {
               <div className="profilesidebar">
                 <div className="sidebarheader">
                   <span className="closebtn" onClick={() => setShowProfile(false)}>×</span>
-                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       Menu</h3>
                 </div>
                 <ul className="sidebarmenu">
