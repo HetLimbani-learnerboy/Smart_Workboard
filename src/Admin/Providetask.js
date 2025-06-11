@@ -93,7 +93,7 @@ const Providetask = () => {
                 {showDelete && (
                   <td>
                     <button className="delete-row-btn" onClick={() => handleDelete(task._id)}>
-                      ❌ Delete
+                      Delete
                     </button>
                   </td>
                 )}
