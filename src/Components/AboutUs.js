@@ -3,10 +3,10 @@ import './Aboutus.css';
 
 const AboutUs = () => {
   return (
-    <div className='aboutus-con'>
-    <div className="about-us-container">
+    <div className='aboutuscon'>
+    <div className="aboutuscontainer">
       <h1>About Us <span role="img" aria-label="handshake">🤝</span></h1>
-      <div className="aboutcontent-wrapper">
+      <div className="aboutcontentwrapper">
         <div className="leftsection">
           <h2>Contact Information <span role="img" aria-label="telephone">📞</span></h2>
           <ul>

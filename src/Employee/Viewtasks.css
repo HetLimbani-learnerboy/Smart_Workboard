@@ -1,0 +1,38 @@
+.viewtasks-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 24px;
+  background: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.no-task {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px #ccc;
+}
+
+.task-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}

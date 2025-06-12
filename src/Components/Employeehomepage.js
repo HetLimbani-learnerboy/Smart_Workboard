@@ -113,7 +113,7 @@ const EmployeeHomepage = () => {
         <h2>Welcome to the Employee Dashboard</h2>
         <p>Access your tasks, profile, and company resources here.</p>
         <div className="employeecardsection">
-          <a className="employeecard" href="/tasks">📝 View Tasks</a>
+          <a className="employeecard" href="/viewtask">📝 View Tasks</a>
           <a className="employeecard" href="/resources">📩 Communication & Collaboration</a>
           <a className="employeecard" href="/profile">👤 Manage Profile</a>
         </div>
