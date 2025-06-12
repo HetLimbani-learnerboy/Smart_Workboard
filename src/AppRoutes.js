@@ -21,6 +21,8 @@ import Viewtasks from './Employee/Viewtasks';
 import Addtask from './Admin/Addtasks';
 import Meetingpage from './Admin/Meetingpage';
 import Schedulemeeting from './Admin/Schedulemeeting';
+import Schedulemeet from './Employee/Schedulemeet';
+import Commcoll from './Employee/Commcoll';
 import './App.css';
 
 function AppRoutes() {
@@ -42,13 +44,15 @@ function AppRoutes() {
   const isSendmsgRoute = location.pathname.startsWith('/sendmessage');
   const isSendnotiRoute= location.pathname.startsWith('/sendnotification');
   const isProvidetaskRoute = location.pathname.startsWith('/providetask');
-  const isAddtask= location.pathname.startsWith('/addtask')
-  const isviewtask= location.pathname.startsWith('/viewtask')
-  const ismeetingpage= location.pathname.startsWith('/meeting')
-  const isschedulemeeting = location.pathname.startsWith('/schedulemeeting')
+  const isAddtask= location.pathname.startsWith('/addtask');
+  const isviewtask= location.pathname.startsWith('/viewtask');
+  const ismeetingpage= location.pathname.startsWith('/meeting');
+  const isschedulemeeting = location.pathname.startsWith('/schedulemeeting');
+  const iscommcoll = location.pathname.startsWith('/commcoll');
+  const isschedulemeet = location.pathname.startsWith('/schedulemeet');
   
   const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute||
-   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting;
+   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting || iscommcoll;
 
   return (
     <>
@@ -77,6 +81,8 @@ function AppRoutes() {
         <Route path='/viewtask' element={<Viewtasks/>}/>
         <Route path='/meeting' element={<Meetingpage/>}/>
         <Route path='/schedulemeeting' element={<Schedulemeeting/>}/>
+        <Route path='/commcoll' element={<Commcoll/>}/>
+        <Route path='/schedulemeet' element={<Schedulemeet/>}/>
 
       </Routes>
     </>
