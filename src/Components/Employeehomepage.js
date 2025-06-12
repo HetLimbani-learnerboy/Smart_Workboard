@@ -93,13 +93,14 @@ const EmployeeHomepage = () => {
               <div className="profilesidebar">
                 <div className="sidebarheader">
                   <span className="closebtn" onClick={() => setShowProfile(false)}>×</span>
-                   <h3>   {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+                   <h3>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     Menu</h3>
                 </div>
                 <ul className="sidebarmenu">
-                  <li><a href="/profile">👤 View Profile</a></li>
-                  <li><a href="/profile/edit">✏️ Edit Profile</a></li>
-                  <li><a href="/settings">⚙️ Account Settings</a></li>
+                  <li> <a href="/viewtask">📝 View Tasks</a></li>
+                  <li><a href="/commcoll">📩 Communication & Collaboration</a></li>
+                  <li> <a href="/appappli">📋 My Applications</a></li>
+                  <li><a href="/profile">👤 Manage Profile</a></li>
                   <li><button onClick={handleLogout}>🚪 Logout</button></li>
                 </ul>
               </div>
@@ -115,7 +116,7 @@ const EmployeeHomepage = () => {
         <div className="employeecardsection">
           <a className="employeecard" href="/viewtask">📝 View Tasks</a>
           <a className="employeecard" href="/commcoll">📩 Communication & Collaboration</a>
-          <a className="employeecard" href="/profile">👤 Manage Profile</a>
+          <a className="employeecard" href="/appappli">📋 My Applications</a>
         </div>
       </div>
     </div>

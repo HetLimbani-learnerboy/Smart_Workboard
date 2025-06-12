@@ -99,7 +99,7 @@ const AdminHomepage = () => {
               <div className="profile-sidebar">
                 <div className="sidebar-header">
                   <span className="close-btn" onClick={() => setShowProfile(false)}>×</span>
-                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     Menu</h3>
                 </div>
                 <ul className="sidebar-menu">

@@ -1,38 +1,75 @@
 .viewtasks-container {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
   max-width: 700px;
-  margin: auto;
-  padding: 24px;
-  background: #f0f8ff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
-  font-family: 'Segoe UI', sans-serif;
+  margin: 0 auto;
+  margin-top:3%;
 }
 
 h2 {
   text-align: center;
+  color: #0077b6;
   margin-bottom: 20px;
 }
 
 .no-task {
   text-align: center;
-  color: #888;
+  color: #999;
   font-size: 18px;
 }
 
 .task-list {
   list-style: none;
-  padding: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-card {
-  background: #fff;
-  margin-bottom: 15px;
-  padding: 15px;
+  background: #f9f9f9;
+  border-left: 6px solid #0077b6;
+  margin-bottom: 16px;
+  padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .task-card p {
-  margin: 5px 0;
-  font-size: 16px;
+  margin: 4px 0;
+  padding: 10px;
+}
+
+.status-toggle-btn {
+  width: 200px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.status-toggle-btn.working {
+  background-color: #198754;
+  color: white;
+}
+
+.status-toggle-btn.done {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.status-toggle-btn:hover {
+  opacity: 0.85;
+}
+
+.back-button{
+   background: #0077b6;
+  margin-top: 1px;
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
 }
