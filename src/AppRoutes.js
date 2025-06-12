@@ -19,13 +19,13 @@ import Providetask from './Admin/Providetask';
 import SendNotification from './Admin/SendNotification';
 import Viewtasks from './Employee/Viewtasks';
 import Addtask from './Admin/Addtasks';
-
+import Meetingpage from './Admin/Meetingpage';
+import Schedulemeeting from './Admin/Schedulemeeting';
 import './App.css';
 
 function AppRoutes() {
   const location = useLocation();
 
-  // List of exact routes where header should be hidden
   const exactHideHeaderRoutes = [
     '/exploremore',
     '/employeehome',
@@ -44,9 +44,11 @@ function AppRoutes() {
   const isProvidetaskRoute = location.pathname.startsWith('/providetask');
   const isAddtask= location.pathname.startsWith('/addtask')
   const isviewtask= location.pathname.startsWith('/viewtask')
+  const ismeetingpage= location.pathname.startsWith('/meeting')
+  const isschedulemeeting = location.pathname.startsWith('/schedulemeeting')
   
   const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute||
-   isProvidetaskRoute|| isAddtask || isviewtask;
+   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting;
 
   return (
     <>
@@ -73,6 +75,8 @@ function AppRoutes() {
         <Route path='/providetask' element={<Providetask/>}/>
         <Route path='/addtask' element={<Addtask/>}/>
         <Route path='/viewtask' element={<Viewtasks/>}/>
+        <Route path='/meeting' element={<Meetingpage/>}/>
+        <Route path='/schedulemeeting' element={<Schedulemeeting/>}/>
 
       </Routes>
     </>

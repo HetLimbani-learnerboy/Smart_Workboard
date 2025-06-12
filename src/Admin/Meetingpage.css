@@ -1,0 +1,101 @@
+.meeting-container {
+  padding: 30px;
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.meeting-container h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 30px;
+}
+
+.meeting-card {
+  background: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #0077b6;
+}
+
+.meeting-card h3 {
+  margin-top: 0;
+  color: #343a40;
+}
+
+.meeting-card p {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.attend-btn,
+.show-btn {
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.attend-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.attend-btn:hover {
+  background-color: #218838;
+}
+
+.show-btn {
+  background-color: #0077b6;
+  color: white;
+}
+
+.show-btn:hover {
+  background-color: #005f8e;
+}
+
+.attendee-lists {
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.attendee-block {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.attendee-block h4 {
+  color: #495057;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.attendee-block ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attendee-block li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.schedulemeeting-btn{
+    color: white;
+    padding: 20px;
+    font-size: large;
+    border-radius: 20px;
+    background-color:#005f8e ;
+}
