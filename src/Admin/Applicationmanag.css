@@ -1,0 +1,58 @@
+.applicationmanage-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    gap: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.staffapplication, .newapplication {
+    flex: 1;
+    min-width: 400px;
+}
+
+.staffapplication-container ul,
+.fresherapplication-container ul {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1.3fr 2fr 3fr 1fr 2fr;
+    list-style-type: none;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    align-items: center;
+    gap: 10px;
+}
+
+.staffapplication-container ul:nth-child(1),
+.fresherapplication-container ul:nth-child(1) {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.actionbutton{
+    color: #f0f0f0;
+    font-weight: bolder;
+    margin-right: 20px;
+    width: 100px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #1976d2;
+    margin-top: 2px;
+}
+
+.backbuttonappli{
+    text-align: center;
+    text-decoration: none;
+    color: #f0f0f0;
+    margin-right: 20px;
+    width: 70px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #1976d2;
+    font-weight: bolder;
+}

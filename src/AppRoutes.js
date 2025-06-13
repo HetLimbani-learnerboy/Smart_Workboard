@@ -25,6 +25,7 @@ import Schedulemeet from './Employee/Schedulemeet';
 import Commcoll from './Employee/Commcoll';
 import ProfilePage from './Components/Profilepage';
 import Myappli from './Employee/Myappli';
+import Applicationmanag from './Admin/Applimanage';
 import './App.css';
 
 function AppRoutes() {
@@ -53,10 +54,13 @@ function AppRoutes() {
   const iscommcoll = location.pathname.startsWith('/commcoll');
   const isschedulemeet = location.pathname.startsWith('/schedulemeet');
   const isprofilepage= location.pathname.startsWith('/profile');
-  const ismyappli= location.pathname.startsWith('/myappli')
+  const ismyappli= location.pathname.startsWith('/myappli');
+  const isapplimanage=location.pathname.startsWith('/applicationmanage')
+
   
   const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute||
-   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting || iscommcoll||isschedulemeet||isprofilepage || ismyappli;
+   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting || iscommcoll||isschedulemeet||isprofilepage 
+   || isapplimanage;
 
   return (
     <>
@@ -89,6 +93,7 @@ function AppRoutes() {
         <Route path='/schedulemeet' element={<Schedulemeet/>}/>
         <Route path='/profile' element={<ProfilePage/>}/>
         <Route path='/myappli' element={<Myappli/>}/>
+        <Route path='/applicationmanage' element={<Applicationmanag/>}/>
 
       </Routes>
     </>

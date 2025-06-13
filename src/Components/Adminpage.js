@@ -106,7 +106,7 @@ const AdminHomepage = () => {
                   <li><Link to="/adminusers">👥 User Management</Link></li>
                   <li><Link to="/providetask">📋 Provide Tasks</Link></li>
                   <li><Link to="/meeting">💬 Meeting & Interview Scheduling</Link></li>
-                  <li><Link to="/Admin/applicationmanage">🧑‍💻 Application Management</Link></li>
+                  <li><Link to="/applicationmanage">🧑‍💻 Application Management</Link></li>
                   <li><Link to="/profile">👤 Manage Profile</Link></li>
                   <li><button onClick={handleLogout}>🚪 Logout</button></li>
                 </ul>
@@ -124,7 +124,7 @@ const AdminHomepage = () => {
           <Link className="employee-card" to="/adminusers">👥 Manage Users</Link>
           <Link className="employee-card" to="/providetask">📋 Provide Tasks</Link>
           <Link className="employee-card" to="/meeting">💬 Meeting & Interview Scheduling</Link>
-          <Link className="employee-card" to="/Admin/applicationmanage">🧑‍💻 Application Management</Link>
+          <Link className="employee-card" to="/applicationmanage">🧑‍💻 Application Management</Link>
           <Link className="employee-card" to="/Admin/pdfreport">🧠 Resume Evaluation</Link>
           <Link className="employee-card" to="/Admin/analytics">📊 Analytics</Link>
         </div>
