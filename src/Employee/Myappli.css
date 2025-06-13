@@ -1,20 +1,49 @@
 .application-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
 }
 
-.application-form input,
-.application-form textarea,
+.application-form {
+    padding: 20px;
+    border: 4px solid;
+    margin-top: 30px;
+    border-radius: 30px;
+    border-color: #1976d2;
+}
+
+.application-form input {
+    width: 97%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 .application-form select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.application-form textarea {
+    width: 96%;
+    padding: 10px;
+    margin: 10px 0;
 }
 
 .application-card {
-  border: 1px solid #ccc;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.backbuttondesign {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #1976d2;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
 }

@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
+
 import "./Myappli.css"; // You can create your own CSS for styling
+import { useNavigate } from "react-router-dom";
 
 const applicationTypes = [
   "Leave Application",
@@ -13,6 +15,7 @@ const applicationTypes = [
 
 const Myappli = () => {
   const user = JSON.parse(localStorage.getItem("User") || "{}");
+  const navigate= useNavigate();
   const [form, setForm] = useState({
     name: user.name || "",
     email: user.email || "",
@@ -93,6 +96,7 @@ const Myappli = () => {
           readOnly
         />
         <button type="submit">Submit Application</button>
+        <button className="backbuttondesign" onClick={() => navigate("/employeehome")}>← Back</button>
       </form>
 
       <h3>📑 Your Applications</h3>
@@ -102,16 +106,7 @@ const Myappli = () => {
             <p><strong>{index + 1}.</strong> <strong>Type:</strong> {app.type}</p>
             <p><strong>Description:</strong> {app.description}</p>
             <p><strong>Status:</strong> {app.status}</p>
-            {["pending", "rejected"].includes(app.status) && (
-              <select
-                value={app.status}
-                onChange={(e) => handleStatusChange(app._id, e.target.value)}
-              >
-                <option value="pending">Pending</option>
-                <option value="approved">Approved</option>
-                <option value="rejected">Rejected</option>
-              </select>
-            )}
+          
           </div>
         ))}
       </div>
