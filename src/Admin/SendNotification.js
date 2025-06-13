@@ -21,7 +21,6 @@ const SendNotification = () => {
         body: JSON.stringify({
           message,
           timestamp: new Date().toISOString(),
-          adminId: "admin001" // Optional: add dynamic admin ID if needed
         })
       });
 

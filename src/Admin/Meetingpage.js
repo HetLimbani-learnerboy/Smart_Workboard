@@ -32,5 +32,4 @@ const Meetingpage = () => {
         </div>
     );
 };
-
 export default Meetingpage;

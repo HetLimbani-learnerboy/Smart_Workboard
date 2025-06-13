@@ -10,13 +10,12 @@ const UpdateEmployee = () => {
     const [department, setDepartment] = useState("");
     const [joiningDate, setJoiningDate] = useState("");
     const [status, setStatus] = useState("");
-    const [uniqcode, setUniqcode] = useState(""); // readonly
+    const [uniqcode, setUniqcode] = useState("");
     const [error, setError] = useState(false);
 
     const params = useParams();
     const navigate = useNavigate();
 
-    // Fetch employee details on mount
     useEffect(() => {
         const getEmployeeDetails = async () => {
             const res = await fetch(`http://localhost:5021/updateuser/${params.id}`);
@@ -38,7 +37,6 @@ const UpdateEmployee = () => {
         getEmployeeDetails();
     }, [params.id, navigate]);
 
-    // Handle update
     const updateEmployeeHandle = async (e) => {
         e.preventDefault();
         if (!name || !email || !role) {

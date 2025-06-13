@@ -109,7 +109,6 @@ const Sendmsg = () => {
 
       <button className="send-btn" onClick={handleSubmit}>Send Message</button>
       <Link className="back-btn" to="/adminusers">← Back</Link>
-
     </div>
   );
 };

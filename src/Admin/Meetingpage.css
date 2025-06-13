@@ -63,7 +63,7 @@
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
-  
+
 }
 
 .attendee-block {
@@ -97,6 +97,7 @@
   font-size: 0.95rem;
 
 }
+
 .attend-toggle-btn {
   position: absolute;
   right: 20px;
@@ -116,7 +117,8 @@
 }
 
 .meeting-card {
-  position: relative; /* important for absolute positioning the button */
+  position: relative;
+  /* important for absolute positioning the button */
   background: #ffffff;
   padding: 20px 20px 25px;
   border-radius: 12px;
@@ -124,21 +126,19 @@
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
 }
 
-
-.schedulemeeting-btn{
-    color: white;
-    padding: 20px;
-    font-size: large;
-    border-radius: 20px;
-    background-color:#0077b6 ;
-    cursor:pointer;
+.schedulemeeting-btn {
+  color: white;
+  padding: 20px;
+  font-size: large;
+  border-radius: 20px;
+  background-color: #0077b6;
+  cursor: pointer;
 }
 
-
-.backbutton{
-    color: white;
-    border-radius: 20px;
-    background-color:#0077b6 ;
-    padding: 10px;
-    cursor:pointer;
+.backbutton {
+  color: white;
+  border-radius: 20px;
+  background-color: #0077b6;
+  padding: 10px;
+  cursor: pointer;
 }

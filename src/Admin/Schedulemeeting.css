@@ -132,7 +132,7 @@ h2 {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* space between each list item */
+    gap: 8px;
 }
 
 .selected-employees li {

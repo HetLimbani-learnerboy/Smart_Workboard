@@ -14,8 +14,9 @@ h2 {
   margin-bottom: 16px;
 }
 
-.search-input, .task-input{
-max-width: 575px;
+.search-input,
+.task-input {
+  max-width: 575px;
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -24,8 +25,8 @@ max-width: 575px;
   font-size: 16px;
 }
 
-.status-dropdown{
-    max-width: 600px;
+.status-dropdown {
+  max-width: 600px;
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -33,6 +34,7 @@ max-width: 575px;
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
 .employee-list {
   max-height: 200px;
   overflow-y: auto;
@@ -61,7 +63,7 @@ max-width: 575px;
 }
 
 .backbtn {
-max-width: 70px;
+  max-width: 70px;
   display: block;
   text-align: center;
   margin-top: 12px;

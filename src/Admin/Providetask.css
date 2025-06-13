@@ -74,15 +74,15 @@ h2 {
 }
 
 .status-btn.assigned {
-  background-color: #ffc107; /* yellow */
+  background-color: #ffc107;
 }
 
 .status-btn.working {
-  background-color: #17a2b8; /* blue */
+  background-color: #17a2b8;
 }
 
 .status-btn.finished {
-  background-color: #28a745; /* green */
+  background-color: #28a745;
 }
 
 .delete-row-btn {
@@ -133,5 +133,3 @@ h2 {
   background-color: #198754;
   font-weight: bold;
 }
-
-

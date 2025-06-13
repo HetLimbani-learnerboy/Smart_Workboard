@@ -14,7 +14,6 @@ function Addemployee() {
     status: "",
     password: ""
   });
-
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 

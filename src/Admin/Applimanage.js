@@ -40,9 +40,9 @@ const Applicationmanag = () => {
 
     return (
         <div className="applicationmanage-container">
-   
-         <Link className="backbuttonappli" to={'/adminpage'}>Back</Link>
-      
+
+            <Link className="backbuttonappli" to={'/adminpage'}>Back</Link>
+
             <div className="staffapplication">
                 <h2>📋 Staff Applications</h2>
                 <div className="staffapplication-container">
@@ -64,8 +64,8 @@ const Applicationmanag = () => {
                             <li>{app.description}</li>
                             <li>{app.status}</li>
                             <li>
-                                <button  className='actionbutton' onClick={() => updateStaffStatus(app._id, "approved")}>Approve</button>
-                                <button  className='actionbutton' onClick={() => updateStaffStatus(app._id, "rejected")}>Reject</button>
+                                <button className='actionbutton' onClick={() => updateStaffStatus(app._id, "approved")}>Approve</button>
+                                <button className='actionbutton' onClick={() => updateStaffStatus(app._id, "rejected")}>Reject</button>
                             </li>
                         </ul>
                     ))}
@@ -101,8 +101,8 @@ const Applicationmanag = () => {
                             </li>
                             <li>{app.status}</li>
                             <li>
-                                <button  className='actionbutton' onClick={() => updateFresherStatus(app._id, "accepted")}>Accept</button>
-                                <button  className='actionbutton' onClick={() => updateFresherStatus(app._id, "rejected")}>Reject</button>
+                                <button className='actionbutton' onClick={() => updateFresherStatus(app._id, "accepted")}>Accept</button>
+                                <button className='actionbutton' onClick={() => updateFresherStatus(app._id, "rejected")}>Reject</button>
                             </li>
                         </ul>
                     ))}

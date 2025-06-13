@@ -7,7 +7,6 @@ const Adminusers = () => {
 
   const navigate = useNavigate();
 
-  // Fetch all employees
   const getEmployees = async () => {
     const res = await fetch("http://localhost:5021/users");
     if (res.ok) {
@@ -22,7 +21,6 @@ const Adminusers = () => {
     getEmployees();
   }, []);
 
-  // Search employees
   const handleSearch = async (e) => {
     const key = e.target.value.trim();
     if (key.length > 0) {
@@ -128,30 +126,30 @@ const Adminusers = () => {
           Back to home
         </button>
       </div>
-        <div className="action-buttons">
-          <button
-            type="button"
-            className="action-btn"
-            onClick={() => navigate("/addemployee")}
-          >
-            ➕ Add Employee
-          </button>
-          <button
-            type="button"
-            className="action-btn"
-            onClick={() => navigate("/sendmessage")}
-          >
-            📨 Send Message
-          </button>
-          <button
-            type="button"
-            className="action-btn"
-            onClick={() => navigate("/sendnotification")}
-          >
-            🔔 Send Notification
-          </button>
-        </div>
-      
+      <div className="action-buttons">
+        <button
+          type="button"
+          className="action-btn"
+          onClick={() => navigate("/addemployee")}
+        >
+          ➕ Add Employee
+        </button>
+        <button
+          type="button"
+          className="action-btn"
+          onClick={() => navigate("/sendmessage")}
+        >
+          📨 Send Message
+        </button>
+        <button
+          type="button"
+          className="action-btn"
+          onClick={() => navigate("/sendnotification")}
+        >
+          🔔 Send Notification
+        </button>
+      </div>
+
     </div>
   );
 };

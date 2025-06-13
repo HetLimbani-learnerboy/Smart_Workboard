@@ -12,13 +12,12 @@ const Providetask = () => {
   }, []);
 
   const fetchTasks = async () => {
-  const res = await fetch("http://localhost:5021/providetask");
-  if (res.ok) {
-    const data = await res.json();
-    setTasks(data);
-  }
-};
-
+    const res = await fetch("http://localhost:5021/providetask");
+    if (res.ok) {
+      const data = await res.json();
+      setTasks(data);
+    }
+  };
 
   const toggleStatus = async (taskId, currentStatus) => {
     const statusCycle = ['assigned', 'working', 'finished'];
