@@ -107,7 +107,7 @@ const AdminHomepage = () => {
                   <li><Link to="/providetask">📋 Provide Tasks</Link></li>
                   <li><Link to="/meeting">💬 Meeting & Interview Scheduling</Link></li>
                   <li><Link to="/Admin/applicationmanage">🧑‍💻 Application Management</Link></li>
-                  <li><Link to="/Admin/settings">⚙️ Settings</Link></li>
+                  <li><Link to="/profile">👤 Manage Profile</Link></li>
                   <li><button onClick={handleLogout}>🚪 Logout</button></li>
                 </ul>
               </div>

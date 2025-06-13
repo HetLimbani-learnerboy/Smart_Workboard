@@ -99,7 +99,7 @@ const EmployeeHomepage = () => {
                 <ul className="sidebarmenu">
                   <li> <a href="/viewtask">📝 View Tasks</a></li>
                   <li><a href="/commcoll">📩 Communication & Collaboration</a></li>
-                  <li> <a href="/appappli">📋 My Applications</a></li>
+                  <li> <a href="/myappli">📋 My Applications</a></li>
                   <li><a href="/profile">👤 Manage Profile</a></li>
                   <li><button onClick={handleLogout}>🚪 Logout</button></li>
                 </ul>
@@ -116,7 +116,7 @@ const EmployeeHomepage = () => {
         <div className="employeecardsection">
           <a className="employeecard" href="/viewtask">📝 View Tasks</a>
           <a className="employeecard" href="/commcoll">📩 Communication & Collaboration</a>
-          <a className="employeecard" href="/appappli">📋 My Applications</a>
+          <a className="employeecard" href="/myappli">📋 My Applications</a>
         </div>
       </div>
     </div>
