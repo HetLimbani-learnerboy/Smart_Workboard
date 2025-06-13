@@ -5,4 +5,5 @@ const Adminnavigateprotected = () => {
     const adminlocation = navigator('/adminhomepage')
     return adminlocation === "true" ? <Outlet /> : <Navigate to="/adminverification" />;
 }
+
 export default Adminnavigateprotected;

@@ -20,14 +20,12 @@ const AdminHomepage = () => {
     user = { name: "Admin" };
   }
 
-  // Fetch notifications on mount
   useEffect(() => {
     fetch("http://localhost:5021/notifications")
       .then(res => res.json())
       .then(data => setNotifications(data));
   }, []);
 
-  // Fetch messages for admin on mount (optional: adjust endpoint as needed)
   useEffect(() => {
     fetch("http://localhost:5021/messages/admin")
       .then(res => res.json())
@@ -41,7 +39,6 @@ const AdminHomepage = () => {
 
   return (
     <div className="employee-homepage">
-      {/* Navbar */}
       <div className="employee-navbar">
         <div className="navbar-left">
           <Link to="/adminpage" className="brand-logo">
@@ -116,7 +113,6 @@ const AdminHomepage = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="employee-homepage-container">
         <h2>Welcome Admin</h2>
         <p>Control and monitor users, tasks, applications, and more.</p>
