@@ -23,7 +23,7 @@ const Schedulemeet = () => {
         setSelectedEmployees((prev) =>
             prev.includes(id) ? prev.filter((empId) => empId !== id) : [...prev, id]
         );
-        setSearch(""); // Clear search after selection/removal
+        setSearch("");
     };
 
     const handleRemoveSelected = (id) => {

@@ -24,9 +24,9 @@ const Commcoll = () => {
   return (
     <div className="meeting-container">
       <h2>Meeting Dashboard</h2>
-       <button className="schedulemeeting-btn" onClick={() => navigate('/schedulemeet')}>
-                Schedule Meeting
-            </button>
+      <button className="schedulemeeting-btn" onClick={() => navigate('/schedulemeet')}>
+        Schedule Meeting
+      </button>
       {hasMeetings ? (
         <>
           <h2>Your Assigned Meetings:</h2>
@@ -40,7 +40,7 @@ const Commcoll = () => {
         </>
       ) : (
         <div className="no-meetings">
-          <h3>😴 You currently have no meetings assigned.</h3>
+          <h3>You currently have no meetings assigned.</h3>
         </div>
       )}
       <button className="backbutton" onClick={() => navigate("/employeehome")}>← Back</button>

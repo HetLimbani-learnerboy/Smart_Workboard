@@ -27,7 +27,6 @@ import ProfilePage from './Components/Profilepage';
 import Myappli from './Employee/Myappli';
 import Applicationmanag from './Admin/Applimanage';
 import Analytics from './Admin/Analytics';
-
 import './App.css';
 
 function AppRoutes() {
@@ -47,22 +46,22 @@ function AppRoutes() {
   const isUpdateUserRoute = location.pathname.startsWith('/updateuser/');
   const isAddemployeeRoute = location.pathname.startsWith('/addemployee');
   const isSendmsgRoute = location.pathname.startsWith('/sendmessage');
-  const isSendnotiRoute= location.pathname.startsWith('/sendnotification');
+  const isSendnotiRoute = location.pathname.startsWith('/sendnotification');
   const isProvidetaskRoute = location.pathname.startsWith('/providetask');
-  const isAddtask= location.pathname.startsWith('/addtask');
-  const isviewtask= location.pathname.startsWith('/viewtask');
-  const ismeetingpage= location.pathname.startsWith('/meeting');
+  const isAddtask = location.pathname.startsWith('/addtask');
+  const isviewtask = location.pathname.startsWith('/viewtask');
+  const ismeetingpage = location.pathname.startsWith('/meeting');
   const isschedulemeeting = location.pathname.startsWith('/schedulemeeting');
   const iscommcoll = location.pathname.startsWith('/commcoll');
   const isschedulemeet = location.pathname.startsWith('/schedulemeet');
-  const isprofilepage= location.pathname.startsWith('/profile');
-  const ismyappli= location.pathname.startsWith('/myappli');
-  const isapplimanage=location.pathname.startsWith('/applicationmanage');
-  const isanalytics= location.pathname.startsWith('/analytics');
+  const isprofilepage = location.pathname.startsWith('/profile');
+  const ismyappli = location.pathname.startsWith('/myappli');
+  const isapplimanage = location.pathname.startsWith('/applicationmanage');
+  const isanalytics = location.pathname.startsWith('/analytics');
 
-  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute|| isSendmsgRoute || isSendnotiRoute||
-   isProvidetaskRoute|| isAddtask || isviewtask || ismeetingpage || isschedulemeeting || iscommcoll||isschedulemeet||isprofilepage 
-   || isapplimanage || isanalytics ||ismyappli ;
+  const shouldHideHeader = isExactMatch || isUpdateUserRoute || isAddemployeeRoute || isSendmsgRoute || isSendnotiRoute ||
+    isProvidetaskRoute || isAddtask || isviewtask || ismeetingpage || isschedulemeeting || iscommcoll || isschedulemeet || isprofilepage
+    || isapplimanage || isanalytics || ismyappli;
 
   return (
     <>
@@ -83,20 +82,20 @@ function AppRoutes() {
 
         <Route path="/adminusers" element={<Adminusers />} />
         <Route path="/updateuser/:id" element={<UpdateEmployee />} />
-        <Route path='/addemployee' element={<Addemployee/>}/>
-        <Route path='/sendmessage' element={<Sendmsg/>}/>
-        <Route path='/sendnotification' element={<SendNotification/>}/>
-        <Route path='/providetask' element={<Providetask/>}/>
-        <Route path='/addtask' element={<Addtask/>}/>
-        <Route path='/viewtask' element={<Viewtasks/>}/>
-        <Route path='/meeting' element={<Meetingpage/>}/>
-        <Route path='/schedulemeeting' element={<Schedulemeeting/>}/>
-        <Route path='/commcoll' element={<Commcoll/>}/>
-        <Route path='/schedulemeet' element={<Schedulemeet/>}/>
-        <Route path='/profile' element={<ProfilePage/>}/>
-        <Route path='/myappli' element={<Myappli/>}/>
-        <Route path='/applicationmanage' element={<Applicationmanag/>}/>
-        <Route path='/analytics' element={<Analytics/>}/>
+        <Route path='/addemployee' element={<Addemployee />} />
+        <Route path='/sendmessage' element={<Sendmsg />} />
+        <Route path='/sendnotification' element={<SendNotification />} />
+        <Route path='/providetask' element={<Providetask />} />
+        <Route path='/addtask' element={<Addtask />} />
+        <Route path='/viewtask' element={<Viewtasks />} />
+        <Route path='/meeting' element={<Meetingpage />} />
+        <Route path='/schedulemeeting' element={<Schedulemeeting />} />
+        <Route path='/commcoll' element={<Commcoll />} />
+        <Route path='/schedulemeet' element={<Schedulemeet />} />
+        <Route path='/profile' element={<ProfilePage />} />
+        <Route path='/myappli' element={<Myappli />} />
+        <Route path='/applicationmanage' element={<Applicationmanag />} />
+        <Route path='/analytics' element={<Analytics />} />
       </Routes>
     </>
   );

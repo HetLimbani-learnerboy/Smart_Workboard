@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate,navigate } from "react-router-dom";
+import { useNavigate, navigate } from "react-router-dom";
 import "./Viewtasks.css";
 
 const Viewtasks = () => {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("User") || "{}");
   const employeeName = user.name;
@@ -24,7 +24,6 @@ const Viewtasks = () => {
   }, [employeeName, employeeEmail]);
 
   const toggleStatus = async (taskId, currentStatus) => {
-    // Toggle between 'working' and 'finished'
     const newStatus = currentStatus === "working" ? "finished" : "working";
 
     await fetch(`http://localhost:5021/updatetask/${taskId}`, {

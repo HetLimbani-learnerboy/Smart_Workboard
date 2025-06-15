@@ -1,13 +1,11 @@
-
 .header-container {
   color: azure;
   padding: 0;
   text-align: center;
-  position: relative;  /* needed for absolute positioning of video */
+  position: relative;
 }
 
 .name-ul {
-
   position: fixed;
   top: 30px;
   right: 24px;
@@ -16,7 +14,7 @@
   padding: 8px 24px;
   margin: 0;
   border-radius: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   gap: 12px;
   z-index: 1100;
@@ -52,20 +50,22 @@
     padding: 4px 8px;
     gap: 4px;
   }
+
   .name-ul li {
     padding: 6px 8px;
   }
+
   .name-ul li a {
     font-size: 15px;
     padding: 4px 8px;
   }
 }
 
-/* Animation for header-animation remains unchanged */
 @keyframes rotateInfinite {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -92,7 +92,7 @@
   border: 3px solid #1976d2;
   border-radius: 50px;
   padding: 12px 24px;
-   margin: calc(29% - 35%) auto;
+  margin: calc(29% - 35%) auto;
   background-color: #f0f0f0;
   width: fit-content;
   font-size: 22px;
@@ -137,19 +137,19 @@
 
 .homepage:hover p a {
   color: #fff;
-  font-weight:bolder ;
+  font-weight: bolder;
   transform: scale(1.05);
 }
 
 
 .paragraph {
-  color: #1a1a1a; /* rich black */
+  color: #1a1a1a;
   font-size: 2rem;
-  font-family: 'Fira Code', 'Consolas', 'Segoe UI', monospace; 
+  font-family: 'Fira Code', 'Consolas', 'Segoe UI', monospace;
   font-weight: 700;
   overflow: hidden;
-  white-space: normal; /* allow wrapping */
-  word-break: break-word; /* break long words */
+  white-space: normal;
+  word-break: break-word;
   border-right: 2px solid #1a1a1a;
   max-width: 80%;
   display: inline-block;
@@ -158,15 +158,23 @@
   margin: 5% 7%;
   line-height: 1;
   padding: 5%;
-  text-align:center;
+  text-align: center;
 }
+
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  10% { border-color: transparent; }
+  10% {
+    border-color: transparent;
+  }
 }
 
 .image-carousel {
@@ -189,9 +197,9 @@
 }
 
 .image-row img {
-  width: 200px;               /* fixed width */
-  height: 140px;              /* fixed height */
-  object-fit: cover;          /* keeps aspect ratio, crops excess */
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -201,11 +209,11 @@
   transform: scale(1.05);
 }
 
-/* Scroll animations */
 @keyframes scroll-left-right {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -215,12 +223,12 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
-/* Apply animations */
 .scroll-left-right {
   animation-name: scroll-left-right;
 }
@@ -229,14 +237,13 @@
   animation-name: scroll-right-left;
 }
 
-
 .about-us-container {
   max-width: 200%;
   margin: 15% 100px;
   padding: 10px;
   background: #f9f9f9;
   border-radius: 15px;
-  box-shadow: 0 8px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.1);
   color: #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation: fadeSlideUp 1s ease forwards;
@@ -268,22 +275,20 @@
   color: #005cb8;
 }
 
-/* Wrapper for left and right sections */
 .about-content-wrapper {
   display: flex;
   gap: 50px;
   margin-top: 30px;
   justify-content: space-between;
-  flex-wrap: wrap; /* wraps on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Left and right sections take roughly half width */
-.left-section, .right-section {
-  flex: 1 1 20%; /* grow, shrink, basis 45% */
-  min-width: 280px; /* prevent too narrow columns */
+.left-section,
+.right-section {
+  flex: 1 1 20%;
+  min-width: 280px;
 }
 
-/* Animation */
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
@@ -291,13 +296,13 @@
   }
 }
 
-/* Responsive tweak: stack vertically on narrow screens */
 @media (max-width: 700px) {
   .about-content-wrapper {
     flex-direction: column;
   }
 
-.left-section, .right-section {
+  .left-section,
+  .right-section {
     flex: 1 1 100%;
     min-width: auto;
   }

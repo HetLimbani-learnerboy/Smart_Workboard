@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
-
-import "./Myappli.css"; // You can create your own CSS for styling
+import "./Myappli.css";
 import { useNavigate } from "react-router-dom";
 
 const applicationTypes = [
@@ -15,7 +14,7 @@ const applicationTypes = [
 
 const Myappli = () => {
   const user = JSON.parse(localStorage.getItem("User") || "{}");
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: user.name || "",
     email: user.email || "",
@@ -106,7 +105,6 @@ const Myappli = () => {
             <p><strong>{index + 1}.</strong> <strong>Type:</strong> {app.type}</p>
             <p><strong>Description:</strong> {app.description}</p>
             <p><strong>Status:</strong> {app.status}</p>
-          
           </div>
         ))}
       </div>
