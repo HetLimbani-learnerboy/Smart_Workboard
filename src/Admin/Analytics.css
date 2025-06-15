@@ -1,0 +1,43 @@
+.analytics-container {
+  padding: 30px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.analytics-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #222;
+}
+
+.chart-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.chart-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itisbackbutton {
+  text-align: center;
+  text-decoration: none;
+  color: #f0f0f0;
+  margin-right: 20px;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #1976d2;
+  font-weight: bolder;
+}

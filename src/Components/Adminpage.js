@@ -121,8 +121,8 @@ const AdminHomepage = () => {
           <Link className="employee-card" to="/providetask">📋 Provide Tasks</Link>
           <Link className="employee-card" to="/meeting">💬 Meeting & Interview Scheduling</Link>
           <Link className="employee-card" to="/applicationmanage">🧑‍💻 Application Management</Link>
-          <Link className="employee-card" to="/Admin/pdfreport">🧠 Resume Evaluation</Link>
-          <Link className="employee-card" to="/Admin/analytics">📊 Analytics</Link>
+          <Link className="employee-card" to="/analytics">📊 Analytics</Link>
+          <Link className="employee-card" to="/profile">👤 Manage Profile</Link>
         </div>
       </div>
     </div>
