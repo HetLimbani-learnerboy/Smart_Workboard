@@ -5,7 +5,6 @@ import "./ProfilePage.css";
 const ProfilePage = () => {
     const navigate = useNavigate();
     const [profile, setProfile] = useState(null);
-
     const user = JSON.parse(localStorage.getItem("User") || "{}");
 
     useEffect(() => {

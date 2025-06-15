@@ -26,35 +26,34 @@ const SignIn = () => {
     };
 
     const handleLogin = async (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    try {
-        const response = await fetch("http://localhost:5021/signin", {
-            method: 'POST',
-            headers: {
-                'Content-Type': "application/json"
-            },
-            body: JSON.stringify({ email, password })
-        });
+        try {
+            const response = await fetch("http://localhost:5021/signin", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                body: JSON.stringify({ email, password })
+            });
 
-        const result = await response.json();
+            const result = await response.json();
 
-        if (result.auth && result.user) {
-            // Store all users (admin and regular) in localStorage
-            localStorage.setItem("User", JSON.stringify(result.user));
-            if(result.user.email === "adminme@12.com" && result.user.password === "admin1234"){
-                navigate('/adminverification');
+            if (result.auth && result.user) {
+                localStorage.setItem("User", JSON.stringify(result.user));
+                if (result.user.email === "adminme@12.com" && result.user.password === "admin1234") {
+                    navigate('/adminverification');
+                } else {
+                    navigate('/employeehome');
+                }
             } else {
-                navigate('/employeehome');
+                alert(result.message || "Login failed. Please check your credentials.");
             }
-        } else {
-            alert(result.message || "Login failed. Please check your credentials.");
+        } catch (error) {
+            console.error("Login failed:", error);
+            alert("Server error. Please try again later.");
         }
-    } catch (error) {
-        console.error("Login failed:", error);
-        alert("Server error. Please try again later.");
-    }
-};
+    };
 
     return (
         <div className="signin-body">
