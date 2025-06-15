@@ -1,11 +1,8 @@
-/* Container for the entire ExploreMore section */
 .explore-more-header {
   padding: 40px 20px;
-
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Main content container */
 .explore-more-container {
   max-width: 1200px;
   margin: 0 auto 40px;
@@ -20,7 +17,6 @@
   transform: translateY(30px);
 }
 
-/* Headings */
 .explore-more-container h1,
 .explore-more-container h2 {
   color: #1976d2;
@@ -29,14 +25,12 @@
   letter-spacing: 1.2px;
 }
 
-/* Paragraphs */
 .explore-more-container p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 16px;
 }
 
-/* Image gallery container */
 .explore-more-image {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +41,6 @@
   padding: 0 20px;
 }
 
-/* Individual images */
 .explore-more-image img {
   flex: 1 1 300px;
   max-width: 100%;
@@ -58,19 +51,16 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
 .explore-more-image img:hover {
   transform: scale(1.05);
 }
 
-/* About Us section */
 .explore-more-about-us {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Animation */
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
@@ -78,7 +68,6 @@
   }
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .explore-more-container {
     margin: 20px;
@@ -95,6 +84,7 @@
     max-width: 500px;
   }
 }
+
 .aboutus-container {
   max-width: 100%;
   margin: 1% 10%;
@@ -134,22 +124,20 @@
   color: #005cb8;
 }
 
-/* Wrapper for left and right sections */
 .aboutcontent-wrapper {
   display: flex;
   gap: 50px;
   margin-top: 30px;
   justify-content: space-between;
-  flex-wrap: wrap; /* wraps on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Left and right sections take roughly half width */
-.leftsection, .rightsection {
-  flex: 1 1 20%; /* grow, shrink, basis 45% */
-  min-width: 280px; /* prevent too narrow columns */
+.leftsection,
+.rightsection {
+  flex: 1 1 20%;
+  min-width: 280px;
 }
 
-/* Animation */
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
@@ -157,13 +145,13 @@
   }
 }
 
-/* Responsive tweak: stack vertically on narrow screens */
 @media (max-width: 700px) {
   .aboutcontent-wrapper {
     flex-direction: column;
   }
 
-.leftsection, .rightsection {
+  .leftsection,
+  .rightsection {
     flex: 1 1 100%;
     min-width: auto;
   }
@@ -179,35 +167,33 @@
   height: calc(100% + 0px);
   border: 5px solid transparent;
   border-radius: 15px;
-
   z-index: 1;
 }
 
 .explore-more-container,
 .aboutus-container {
-  position: relative; 
-  z-index: 0; 
+  position: relative;
+  z-index: 0;
 }
 
 @keyframes borderTravel {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
 }
 
-
-
-.back-link{
-    color: #f9f9f9;
-    text-decoration: none;
-    padding: 1.5%;
-    border: 2px solid #192bc2;
-    border-radius: 50px;
-    background-color: #192bc2;
-    font-weight: 600; 
+.back-link {
+  color: #f9f9f9;
+  text-decoration: none;
+  padding: 1.5%;
+  border: 2px solid #192bc2;
+  border-radius: 50px;
+  background-color: #192bc2;
+  font-weight: 600;
 }
 
 .emoji {

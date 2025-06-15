@@ -5,7 +5,6 @@ const Applynow = () => {
 
   const applyHandle = async (e) => {
     e.preventDefault();
-
     const form = e.target;
     const formData = new FormData(form);
 
@@ -16,7 +15,6 @@ const Applynow = () => {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         alert(data.message || "Your application has been submitted successfully!");
         form.reset();

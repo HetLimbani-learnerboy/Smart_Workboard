@@ -15,15 +15,14 @@ const Adminverification = () => {
       try {
         const user = JSON.parse(auth);
         if (user.email === "adminme@12.com") {
-          localStorage.removeItem("User"); // logout admin before new verification
+          localStorage.removeItem("User");
         }
       } catch (err) {
-        localStorage.removeItem("User"); // if parsing fails, clear invalid data
+        localStorage.removeItem("User");
       }
     }
   }, []);
 
-  // Caesar cipher (+2 shift)
   const caesarCipher = (text) => {
     if (text.trim().length < 5) return "";
     return text
@@ -52,7 +51,6 @@ const Adminverification = () => {
     const encrypted = caesarCipher(inputSentence.trim());
 
     if (encrypted === cipherText.trim()) {
-      // ✅ Store valid JSON
       localStorage.setItem("User", JSON.stringify({ email: "adminme@12.com" }));
       alert("✅ Verification successful!");
       navigate("/adminpage");
@@ -100,7 +98,6 @@ const Adminverification = () => {
           </div>
 
           {error && <p className="error-text">{error}</p>}
-
           <button type="submit" className="verify-btn">Verify</button>
         </form>
 

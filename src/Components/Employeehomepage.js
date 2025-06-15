@@ -10,14 +10,12 @@ const EmployeeHomepage = () => {
 
   const user = JSON.parse(localStorage.getItem("User")) || { name: "User", _id: "" };
 
-  // Fetch notifications on mount
   useEffect(() => {
     fetch("http://localhost:5021/notifications")
       .then(res => res.json())
       .then(data => setNotifications(data));
   }, []);
 
-  // Fetch messages on mount
   useEffect(() => {
     if (user._id) {
       fetch(`http://localhost:5021/messages/${user._id}`)
@@ -31,13 +29,11 @@ const EmployeeHomepage = () => {
     window.location.href = "/";
   };
 
-  // Only toggle dropdown, don't fetch again
   const toggleNotifications = () => setShowNotif(!showNotif);
   const toggleMessages = () => setShowMessages(!showMessages);
 
   return (
     <div className="employeehomepage">
-      {/* Top Navigation Bar */}
       <div className="employeenavbar">
         <div className="navbarleft">
           <a href="/employeehome" className="brandlogo">
@@ -93,7 +89,7 @@ const EmployeeHomepage = () => {
               <div className="profilesidebar">
                 <div className="sidebarheader">
                   <span className="closebtn" onClick={() => setShowProfile(false)}>×</span>
-                   <h3>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <h3>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     Menu</h3>
                 </div>
                 <ul className="sidebarmenu">
@@ -109,7 +105,6 @@ const EmployeeHomepage = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="employeehomepagecontainer">
         <h2>Welcome to the Employee Dashboard</h2>
         <p>Access your tasks, profile, and company resources here.</p>

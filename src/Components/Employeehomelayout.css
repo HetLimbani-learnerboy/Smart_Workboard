@@ -11,7 +11,6 @@ body {
   background-color: #0077b6;
 }
 
-/* Left Logo */
 .navbarleft .brandlogo {
   display: flex;
   align-items: center;
@@ -34,7 +33,6 @@ body {
   font-style: none;
 }
 
-/* Search Bar */
 .navbarcenter .navbarsearch {
   padding: 8px 12px;
   border-radius: 20px;
@@ -44,7 +42,6 @@ body {
 
 }
 
-/* Right-side Icons */
 .navbarright {
   display: flex;
   align-items: center;
@@ -85,8 +82,8 @@ body {
 }
 
 .notifdropdown ul {
-   display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   height: 200px;
   width: 250px;
   list-style: none;
@@ -109,86 +106,81 @@ body {
   cursor: pointer;
 }
 
-/* Sidebar Slide Menu */
 .profilesidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 200;
-    display: flex;
-    flex-direction:column;
-    animation: slideIn 0.3s ease-out forwards;
-    font-family: 'Segoe UI', sans-serif;
-    border-left: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out forwards;
+  font-family: 'Segoe UI', sans-serif;
+  border-left: 1px solid #ddd;
 }
-/* Sidebar Header */
+
 .sidebarheader {
-    display: flex;
-    align-items: center;
-    height: 67px;
-    padding: 0 20px;
-    background-color: #0077b6;
-    color: white;
+  display: flex;
+  align-items: center;
+  height: 67px;
+  padding: 0 20px;
+  background-color: #0077b6;
+  color: white;
 }
 
 .sidebarheader h3 {
-    font-size: 26px;
-    font-weight: 600;
-    margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
 }
 
-/* Close Button */
 .closebtn {
-    cursor: pointer;
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    background: none;
-    border: none;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  background: none;
+  border: none;
 }
 
-/* Sidebar Menu */
 .sidebarmenu {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /* Stack items vertically */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebarmenu li {
-    margin: 10px 0;
-    width: 100%;
+  margin: 10px 0;
+  width: 100%;
 }
 
-/* Menu Items */
 .sidebarmenu a,
 .sidebarmenu button {
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    font-weight: 500;
-    color: #333;
-    text-decoration: none;
-    background: none;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 6px;
-    transition: background 0.3s, color 0.3s;
-    width: 100%;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+  cursor: pointer;
 }
 
 .sidebarmenu a:hover,
 .sidebarmenu button:hover {
-    background-color: #e0f4ff;
-    color: #0077b6;
+  background-color: #e0f4ff;
+  color: #0077b6;
 }
 
 .employeehomepagecontainer {

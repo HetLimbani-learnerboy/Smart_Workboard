@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Emoji from './Emoji';
 import AboutUs from './AboutUs';
-import './Exploremore.css'; // CSS import must stay after JS imports
+import './Exploremore.css';
 
 const ExploreMore = () => {
     return (
         <div className="explore-more-header">
             <Link to="/" className="back-link"> Back</Link>
-
             <div className="explore-more-container">
                 <h1><Emoji symbol="🚀" label="rocket" /> About this Project</h1>
                 <p>
