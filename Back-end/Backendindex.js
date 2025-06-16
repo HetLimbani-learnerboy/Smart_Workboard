@@ -5,12 +5,13 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const axios = require("axios");
-
 const app = express();
-const uploadsDir = path.join(__dirname, 'applicationuploads');
-if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir);
 
+const uploadsDir = path.join(__dirname, '..', '..', 'applicationuploads');
+
+if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir);
 app.use('/applicationuploads', express.static(uploadsDir));
+
 app.use(cors());
 app.use(express.json());
 
