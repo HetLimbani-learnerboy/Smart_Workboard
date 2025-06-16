@@ -1,3 +1,7 @@
+# Description:
+Employee Management Platform(Smart_Workboard) that streamlines company operations. 👥 Employees can manage tasks, update profiles, and schedule meetings 📅, while Admins can oversee staff, share updates 📢, and analyze company data 📊 — all in one centralized system. ⚙️
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `Project Front-end Demo Layout:`
+<img width="1710" alt="Smart_Workboard_Layout" src="https://github.com/user-attachments/assets/3d622100-dce1-464c-9321-752647dd45dd" />
+
+### `Project Demo Video on Linkedln`
+https://www.linkedin.com/posts/het-limbani-a62a8131a_latestproject-fullstackapp-mernstack-activity-7340352227607281664-kgB2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFD17KoBKwdo2fmF7tvqRxEAvFSK-rpekWA
+
