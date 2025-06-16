@@ -37,5 +37,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 <img width="1710" alt="Smart_Workboard_Layout" src="https://github.com/user-attachments/assets/3d622100-dce1-464c-9321-752647dd45dd" />
 
 ### `Project Demo Video on Linkedln`
-https://www.linkedin.com/posts/het-limbani-a62a8131a_latestproject-fullstackapp-mernstack-activity-7340352227607281664-kgB2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFD17KoBKwdo2fmF7tvqRxEAvFSK-rpekWA
+https://www.linkedin.com/posts/het-limbani-a62a8131a_latestproject-fullstackapp-mernstack-activity-7340358783388319745-CpPw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFD17KoBKwdo2fmF7tvqRxEAvFSK-rpekWA
 
