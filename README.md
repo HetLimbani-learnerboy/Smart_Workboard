@@ -1,4 +1,4 @@
-# Description:
+# Smart_Workboard
 Employee Management Platform(Smart_Workboard) that streamlines company operations. 👥 Employees can manage tasks, update profiles, and schedule meetings 📅, while Admins can oversee staff, share updates 📢, and analyze company data 📊 — all in one centralized system. ⚙️
 
 
